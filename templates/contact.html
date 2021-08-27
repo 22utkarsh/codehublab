@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>codehub.com | Contact</title>
+  <style>
+    body {
+      background-color: #88b9fa45;
+      color: #7c1919;
+    }
+
+    #contform {
+      font-family: cursive;
+    }
+    div#formmm,.button{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- code for navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CodeHub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="courses">Courses</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="blog" id="navbarDropdown" role="button">
+              Blogs
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact">Contact us</a>
+          </li>
+
+          <!-- <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li> -->
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div id="contform">
+    <div class="container text-center pt-4">
+      <h2>Contact Us</h2>
+    </div>
+
+    <form method="POST" action="/contact" class="container-fluid">
+    {% csrf_token %}
+      <div class="container my-8" id='formmm'>
+          <div class="col-md-6">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control bg-secondary text-white" name='firstname' placeholder="First name"
+              aria-label="First name">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Last Name</label>
+            <input type="text" name='lastname' class="form-control bg-secondary text-white" placeholder="Last name"
+              aria-label="Last name">
+          </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" name='email' class="form-control bg-secondary text-white" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Mobile :</label>
+          <input type="number" name='phone' class="form-control bg-secondary text-white" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" name='city' class="form-control bg-secondary text-white" id="inputCity">
+        </div>
+        <div class="col-md-6">
+          <label for="inputdesc"  class="form-label">Tell us :</label>
+          <textarea name="desc" class="form-control bg-secondary text-white" cols="30" rows="10"></textarea>
+        </div>
+        <div class="button col-12 my-3">
+          <button type="submit" class="btn btn-success">Send</button>
+        </div>
+    </form>
+  </div>
+  </div>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CodeHub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Privacy Policy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="courses.html">Copyright</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">All rights reserved</a>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
